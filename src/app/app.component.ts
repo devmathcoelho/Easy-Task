@@ -3,8 +3,6 @@ import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { UsertaskComponent } from './usertask/usertask.component';
 import { DUMMY_USERS } from './dummy-users';
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,7 +12,7 @@ import { DUMMY_USERS } from './dummy-users';
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectedUserId: string = "u1";
+  selectedUserId?: string;
 
   get selectedUser() {
     return this.users.find((user) => user.id === this.selectedUserId);

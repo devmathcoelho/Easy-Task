@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { type tasks} from './task.model';
 @Component({
   selector: 'app-tasks',
   standalone: true,
@@ -9,4 +8,11 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
+  @Input({required: true}) task!: tasks;
+  @Output() complete = new EventEmitter<string>();
+
+  onComplete(){
+    this.complete.emit(this.task.id);
+  }
+
 }

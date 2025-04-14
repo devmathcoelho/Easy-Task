@@ -1,19 +1,19 @@
-#Resume
+# Resume
 
 I created this little aplication with help from my instructor in Angular - The Complete Guide. And i have to say that i loved how Angular works, fells like all my code is connected with each other and that feels good. Before this app i fought Angular was more simple but now i know why it is so complex, it is just too many things to create and change dynamically. Really love this project! 
 
-##Technology
+## Technology
 
 - ANGULAR
 - HTML
 - CSS
 - TYPESCRIPT
 
-##Screenshots
+## Screenshots
 
-![Main Image](./assets/screenshots/main.png "main")
-![Tasks](./assets/screenshots/tasks.png "tasks")
-![Add Tasks](./assets/screenshots/addtasks.png "addtasks")
+![Main Image](./src/assets/screenshots/main.png "main")
+![Tasks](./src/assets/screenshots/tasks.png "tasks")
+![Add Tasks](./src/assets/screenshots/addtasks.png "addtasks")
 
 ## Essentials
 

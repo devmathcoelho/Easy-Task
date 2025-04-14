@@ -1,4 +1,19 @@
-# Essentials
+#Resume
+I created this little aplication with help from my instructor in Angular - The Complete Guide. And i have to say that i loved how Angular works, fells like all my code is connected with each other and that feels good. Before this app i fought Angular was more simple but now i know why it is so complex, it is just too many things to create and change dynamically. Really love this project! 
+
+##Technology
+- ANGULAR
+- HTML
+- CSS
+- TYPESCRIPT
+
+##Screenshots
+
+![Main Image](/assets/screenshots/main.png "main")
+![Tasks](/assets/screenshots/tasks.png "tasks")
+![Add Tasks](/assets/screenshots/addtasks.png "addtasks")
+
+## Essentials
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 

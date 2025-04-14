@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { TasksComponent } from './tasks/tasks.component';
 import { NewTaskComponent } from "./new-task/new-task.component";
+import { TaskService } from './usertask.service';
+import { type newTask } from './tasks/task.model';
 
 @Component({
   selector: 'app-usertask',
@@ -10,42 +12,16 @@ import { NewTaskComponent } from "./new-task/new-task.component";
   styleUrl: './usertask.component.css'
 })
 export class UsertaskComponent {
-  @Input({required: true}) userId: string | undefined;
-  @Input({required: true}) name: string | undefined;
+  @Input({required: true}) userId!: string;
+  @Input({required: true}) name!: string;
   isAddingTask = false;
 
-  tasks = [
-    {
-      id: 't1',
-      userId: 'u1',
-      title: 'Master Angular',
-      summary:
-        'Learn all the basic and advanced features of Angular & how to apply them.',
-      date: '2025-12-31',
-    },
-    {
-      id: 't2',
-      userId: 'u2',
-      title: 'Build first prototype',
-      summary: 'Build a first prototype of the online shop website',
-      date: '2024-05-31',
-    },
-    {
-      id: 't3',
-      userId: 'u3',
-      title: 'Prepare issue template',
-      summary:
-        'Prepare and describe an issue template which will help with project management',
-      date: '2024-06-15',
-    },
-  ];
-
-  get selectedUserTasks(){
-    return this.tasks.filter((task) => task.userId === this.userId)
+  constructor(private taskService: TaskService){
+    
   }
 
-  onCompleteTask(id: string){
-    this.tasks = this.tasks.filter((task) => task.id !== id);
+  get selectedUserTasks(){
+    return this.taskService.getUserTasks(this.userId);
   }
 
   onAddTask(){

@@ -5,3 +5,9 @@ export interface tasks {
   summary: string;
   date: string;
 }
+
+export interface newTask {
+  title: string;
+  summary: string;
+  date: string;
+}
